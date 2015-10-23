@@ -35,6 +35,8 @@
 #include <sys/types.h>
 #ifdef _WIN32
 #include <Winsock2.h>
+#include <Windows.h>
+#define fsync FlushFileBuffers
 #else
 #include <sys/wait.h>
 #include <unistd.h>

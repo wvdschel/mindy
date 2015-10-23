@@ -61,6 +61,10 @@
 #include "shared/byteops.h"
 #include "shared/color_output.h"
 
+#ifdef _WIN32
+#define strncasecmp strnicmp
+#endif
+
 struct library *CurLibrary = NULL;
 struct module *CurModule = NULL;
 
